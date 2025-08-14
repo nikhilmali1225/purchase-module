@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar Example</title>
+    <title>@yield('title', 'My Website')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -38,16 +38,6 @@
         }
         .sidebar a:hover {
             background-color: rgba(255, 255, 255, 0.2);
-        }
-        .newsletter {
-            margin-top: 20px;
-        }
-        .newsletter input {
-            width: 100%;
-            padding: 8px;
-            border: none;
-            border-radius: 4px;
-            margin-top: 5px;
         }
         .content {
             margin-left: 250px;
@@ -86,24 +76,13 @@
 <div class="sidebar" id="sidebar">
     <button class="toggle-btn" id="toggle-btn">☰</button>
     <h2>Splash</h2>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Pages</a>
-    <a href="#">Portfolio</a>
-    <a href="#">Contact</a>
-
-    <div class="newsletter">
-        <p><strong>Subscribe for newsletter</strong></p>
-        <input type="email" placeholder="Enter Email Address">
-    </div>
-
-    <p style="margin-top: 20px; font-size: 12px;">Copyright ©2021 All rights reserved</p>
+    <a href="{{ url('vendor') }}">Vendor</a>
+    <a href="{{ url('product') }}">Product</a>
+    <a href="{{ url('purchase_order') }}">Purchase Order</a>
 </div>
 
 <div class="content">
-  <br><br>
-    <h3>Sidebar #02</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    @yield('content')
 </div>
 
 <script>
