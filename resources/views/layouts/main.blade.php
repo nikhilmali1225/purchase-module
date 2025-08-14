@@ -75,9 +75,9 @@
 
 <div class="sidebar" id="sidebar">
     <button class="toggle-btn" id="toggle-btn">☰</button>
-    <h2>Splash</h2>
+    <h2>ATS</h2>
     <a href="{{ url('vendor') }}">Vendor</a>
-    <a href="{{ url('product') }}">Product</a>
+    <a href="{{ url('products') }}">Product</a>
     <a href="{{ url('purchase_order') }}">Purchase Order</a>
 </div>
 
